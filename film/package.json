@@ -13,6 +13,7 @@
     "render": "nice -n 10 remotion render LineOfTravel out/line-of-travel-raw.mp4 --crf=18 --concurrency=4",
     "master": "node scripts/master.ts",
     "thumbnails": "nice -n 10 remotion still Thumbnail out/line-of-travel-thumbnail-1920.png && nice -n 10 remotion still Thumbnail out/line-of-travel-thumbnail-1280.png --scale=0.6667",
+    "devpost": "nice -n 10 remotion still Card ../docs/devpost/01-card.png && node scripts/gallery.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

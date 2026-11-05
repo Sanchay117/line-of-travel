@@ -2,7 +2,7 @@
 //
 //   node scripts/stills.ts 30 94 330 600        frames of the film
 //   node scripts/stills.ts --scale 0.5 600      at half size
-//   node scripts/stills.ts Thumbnail            the thumbnail
+//   node scripts/stills.ts Thumbnail            the thumbnail (Card: the 3:2 one for Devpost)
 
 import { mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -17,7 +17,7 @@ mkdirSync(out, { recursive: true });
 const args = process.argv.slice(2);
 const at = args.indexOf("--scale");
 const scale = at >= 0 ? Number(args.splice(at, 2)[1]) : 0.5;
-const id = args[0] === "Thumbnail" ? args.shift()! : "LineOfTravel";
+const id = /^[A-Z]/.test(args[0] ?? "") ? args.shift()! : "LineOfTravel";
 const frames = args.map(Number);
 
 const serveUrl = await bundle({ entryPoint: join(root, "src", "index.ts"), publicDir: join(root, "public") });

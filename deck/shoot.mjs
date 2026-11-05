@@ -1,7 +1,8 @@
 // Screenshots of the running site for the deck. Drives headless Chrome over the DevTools
 // protocol, waits until the page reports the map and the solver have finished
 // (window.__shotReady), then clips each element exactly.
-// Usage: node deck/shoot.mjs http://localhost:5191
+// Usage: node deck/shoot.mjs http://localhost:5191           the deck's images
+//        node deck/shoot.mjs http://localhost:5191 gallery   3:2 screens for the Devpost gallery
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
@@ -18,13 +19,26 @@ fs.mkdirSync(OUT, { recursive: true });
 // name, section id to open at, CSS selector to clip (null = the viewport), viewport width, viewport
 // height, padding (px), device scale, output folder
 const PUB = path.join(ROOT, "web", "public");
-const SHOTS = [
-  ["hero", "hero", "#hero", 1440, 860, 0, 2, OUT],
-  ["triptych", "triptych", "#triptych", 1440, 900, 12, 2, OUT],
-  ["case", "case", "#case", 1440, 900, 12, 2, OUT],
-  ["desk", "desk", ".desk-grid", 1440, 900, 16, 2, OUT],
-  ["og", "hero", null, 1200, 630, 0, 1, PUB], // link preview image for the site
-];
+const GALLERY = path.join(ROOT, "docs", "devpost");
+const SETS = {
+  deck: [
+    ["hero", "hero", "#hero", 1440, 860, 0, 2, OUT],
+    ["triptych", "triptych", "#triptych", 1440, 900, 12, 2, OUT],
+    ["case", "case", "#case", 1440, 900, 12, 2, OUT],
+    ["desk", "desk", ".desk-grid", 1440, 900, 16, 2, OUT],
+    ["og", "hero", null, 1200, 630, 0, 1, PUB], // link preview image for the site
+  ],
+  // Whole screens at 3:2 (1440 x 960 at 1.25x = 1800 x 1200), each opened at its section.
+  gallery: [
+    ["02-hero", "hero", null, 1440, 960, 0, 1.25, GALLERY],
+    ["03-turn", "turn", null, 1440, 960, 0, 1.25, GALLERY],
+    ["04-thread", "thread", null, 1440, 960, 0, 1.25, GALLERY],
+    ["05-desk", "desk", null, 1440, 960, 0, 1.25, GALLERY],
+    ["06-proof", "proof", null, 1440, 960, 0, 1.25, GALLERY],
+  ],
+};
+const SHOTS = SETS[process.argv[3] || "deck"];
+for (const dir of new Set(SHOTS.map((s) => s[7]))) fs.mkdirSync(dir, { recursive: true });
 
 const profile = fs.mkdtempSync(path.join(os.tmpdir(), "lot-shoot-"));
 const chrome = spawn(CHROME, ["--headless=new", `--remote-debugging-port=${PORT}`, `--user-data-dir=${profile}`,

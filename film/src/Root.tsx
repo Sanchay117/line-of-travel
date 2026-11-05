@@ -21,6 +21,7 @@ export function Root() {
         }}
       />
       <Still id="Thumbnail" component={Thumbnail} width={1920} height={1080} />
+      <Still id="Card" component={Thumbnail} width={1800} height={1200} defaultProps={{ shape: "card" as const }} />
     </>
   );
 }
