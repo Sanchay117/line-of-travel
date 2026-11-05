@@ -318,7 +318,7 @@ def main():
             dict(label="Learned ranker", value=zone["top1_learned"], hi=True)]),
         methods={k: {c: (None if isinstance(v, float) and math.isnan(v) else float(v)) for c, v in a.loc[k].items()} for k in a.index},
         # public URLs, filled in links.json once the repo and site are published
-        links={**dict(repo="https://github.com/", deck="./LineOfTravel_DataNova2026.pdf", demo=""),
+        links={**dict(repo="https://github.com/", deck="./LineOfTravel_DataNova2026.pdf", demo="", video=""),
                **(json.loads((ROOT / "links.json").read_text()) if (ROOT / "links.json").exists() else {})},
     )
     (WEB / "summary.json").write_text(json.dumps(summary, indent=1))

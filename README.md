@@ -5,7 +5,8 @@
 DataNova 2026 Global Data-thon, problem DN-OR-01 (last-mile delivery route optimization). Solo entry by Sanchay Singh.
 
 - Live demo: https://sanchay117.github.io/line-of-travel/
-- Presentation: [`deck/LineOfTravel_DataNova2026.pptx`](deck/LineOfTravel_DataNova2026.pptx)
+- Demo film, 2:55: https://youtu.be/z7Sm4eI2i9E
+- Presentation: https://docs.google.com/presentation/d/1U-HzbrU4MRka3BVCsoQbG4Qd8OcPVzdB/edit?usp=sharing (source: [`deck/LineOfTravel_DataNova2026.pptx`](deck/LineOfTravel_DataNova2026.pptx))
 - Technical report, validation and scenario analysis: [`docs/REPORT.md`](docs/REPORT.md)
 
 ## The idea

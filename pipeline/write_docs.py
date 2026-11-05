@@ -13,6 +13,9 @@ LOT, Z, TSP, DRV, NN = M["habit_30_300"], M["habit_0_600"], M["tsp"], M["driver"
 links = s["links"]
 demo = links.get("demo") or "(link on the Devpost page)"
 repo = links.get("repo") if links.get("repo") not in (None, "", "https://github.com/") else "(this repository)"
+deck_file = "[`deck/LineOfTravel_DataNova2026.pptx`](deck/LineOfTravel_DataNova2026.pptx)"
+deck = (f"{links['deck']} (source: {deck_file})" if str(links.get("deck", "")).startswith("http") else deck_file)
+video_line = f"- Demo film, 2:55: {links['video']}\n" if links.get("video") else ""
 
 
 def n0(v):
@@ -125,7 +128,7 @@ README = f"""# Line of Travel
 DataNova 2026 Global Data-thon, problem DN-OR-01 (last-mile delivery route optimization). Solo entry by Sanchay Singh.
 
 - Live demo: {demo}
-- Presentation: [`deck/LineOfTravel_DataNova2026.pptx`](deck/LineOfTravel_DataNova2026.pptx)
+{video_line}- Presentation: {deck}
 - Technical report, validation and scenario analysis: [`docs/REPORT.md`](docs/REPORT.md)
 
 ## The idea
