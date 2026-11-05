@@ -13,5 +13,8 @@ deck/build/
 film/node_modules/
 film/out/
 film/public/capture/
+# Generated audio: npm run sfx, npm run music, npm run voice (the word timings in vo/manifest.json stay)
+film/public/sfx/
+film/public/vo/*.wav
 .env
 .env.*

@@ -1,0 +1,1880 @@
+{
+  "voice": "aura-2-draco-en",
+  "lines": {
+    "t-case": {
+      "file": "vo/t-case.wav",
+      "seconds": 4.183,
+      "words": [
+        {
+          "text": "Every",
+          "start": 0,
+          "end": 0.4
+        },
+        {
+          "text": "morning,",
+          "start": 0.4,
+          "end": 0.96
+        },
+        {
+          "text": "a",
+          "start": 0.96,
+          "end": 1.12
+        },
+        {
+          "text": "mail",
+          "start": 1.12,
+          "end": 1.44
+        },
+        {
+          "text": "carrier",
+          "start": 1.44,
+          "end": 1.84
+        },
+        {
+          "text": "cases",
+          "start": 1.84,
+          "end": 2.24
+        },
+        {
+          "text": "the",
+          "start": 2.24,
+          "end": 2.48
+        },
+        {
+          "text": "letters",
+          "start": 2.48,
+          "end": 2.96
+        },
+        {
+          "text": "in",
+          "start": 2.96,
+          "end": 3.28
+        },
+        {
+          "text": "the",
+          "start": 3.28,
+          "end": 3.36
+        },
+        {
+          "text": "order",
+          "start": 3.36,
+          "end": 3.6
+        },
+        {
+          "text": "they",
+          "start": 3.6,
+          "end": 3.92
+        },
+        {
+          "text": "walk.",
+          "start": 3.92,
+          "end": 4.24
+        }
+      ]
+    },
+    "t-name": {
+      "file": "vo/t-name.wav",
+      "seconds": 2.51,
+      "words": [
+        {
+          "text": "The",
+          "start": 0,
+          "end": 0.24
+        },
+        {
+          "text": "Postal",
+          "start": 0.24,
+          "end": 0.64
+        },
+        {
+          "text": "Service",
+          "start": 0.64,
+          "end": 1.04
+        },
+        {
+          "text": "calls",
+          "start": 1.04,
+          "end": 1.36
+        },
+        {
+          "text": "it",
+          "start": 1.36,
+          "end": 1.52
+        },
+        {
+          "text": "the",
+          "start": 1.52,
+          "end": 1.68
+        },
+        {
+          "text": "Line",
+          "start": 1.68,
+          "end": 1.92
+        },
+        {
+          "text": "of",
+          "start": 1.92,
+          "end": 2.16
+        },
+        {
+          "text": "Travel.",
+          "start": 2.16,
+          "end": 2.48
+        }
+      ]
+    },
+    "t-amazon": {
+      "file": "vo/t-amazon.wav",
+      "seconds": 3.819,
+      "words": [
+        {
+          "text": "Amazon",
+          "start": 0.32,
+          "end": 0.64
+        },
+        {
+          "text": "drivers",
+          "start": 0.64,
+          "end": 1.12
+        },
+        {
+          "text": "have",
+          "start": 1.12,
+          "end": 1.44
+        },
+        {
+          "text": "one",
+          "start": 1.44,
+          "end": 1.68
+        },
+        {
+          "text": "too.",
+          "start": 1.68,
+          "end": 2.32
+        },
+        {
+          "text": "Nobody",
+          "start": 2.56,
+          "end": 3.04
+        },
+        {
+          "text": "wrote",
+          "start": 3.04,
+          "end": 3.36
+        },
+        {
+          "text": "it",
+          "start": 3.36,
+          "end": 3.52
+        },
+        {
+          "text": "down.",
+          "start": 3.52,
+          "end": 3.76
+        }
+      ]
+    },
+    "t-tsp": {
+      "file": "vo/t-tsp.wav",
+      "seconds": 3.262,
+      "words": [
+        {
+          "text": "The",
+          "start": 0,
+          "end": 0.32
+        },
+        {
+          "text": "shortest",
+          "start": 0.32,
+          "end": 0.72
+        },
+        {
+          "text": "route",
+          "start": 0.72,
+          "end": 1.04
+        },
+        {
+          "text": "ignores",
+          "start": 1.04,
+          "end": 1.52
+        },
+        {
+          "text": "it,",
+          "start": 1.52,
+          "end": 1.84
+        },
+        {
+          "text": "and",
+          "start": 1.84,
+          "end": 2.16
+        },
+        {
+          "text": "keeps",
+          "start": 2.16,
+          "end": 2.48
+        },
+        {
+          "text": "doubling",
+          "start": 2.48,
+          "end": 2.8
+        },
+        {
+          "text": "back.",
+          "start": 2.8,
+          "end": 3.2
+        }
+      ]
+    },
+    "t-learn": {
+      "file": "vo/t-learn.wav",
+      "seconds": 3.221,
+      "words": [
+        {
+          "text": "So",
+          "start": 0,
+          "end": 0.4
+        },
+        {
+          "text": "we",
+          "start": 0.4,
+          "end": 0.72
+        },
+        {
+          "text": "learned",
+          "start": 0.72,
+          "end": 0.96
+        },
+        {
+          "text": "it,",
+          "start": 0.96,
+          "end": 1.28
+        },
+        {
+          "text": "from",
+          "start": 1.28,
+          "end": 1.6
+        },
+        {
+          "text": "six",
+          "start": 1.6,
+          "end": 1.822
+        },
+        {
+          "text": "thousand",
+          "start": 1.822,
+          "end": 2.32
+        },
+        {
+          "text": "real",
+          "start": 2.32,
+          "end": 2.72
+        },
+        {
+          "text": "routes.",
+          "start": 2.72,
+          "end": 3.2
+        }
+      ]
+    },
+    "t-drop": {
+      "file": "vo/t-drop.wav",
+      "seconds": 1.436,
+      "words": [
+        {
+          "text": "Line",
+          "start": 0,
+          "end": 0.56
+        },
+        {
+          "text": "of",
+          "start": 0.56,
+          "end": 0.8
+        },
+        {
+          "text": "Travel.",
+          "start": 0.8,
+          "end": 1.28
+        }
+      ]
+    },
+    "t-less": {
+      "file": "vo/t-less.wav",
+      "seconds": 1.975,
+      "words": [
+        {
+          "text": "Six",
+          "start": 0,
+          "end": 0.293
+        },
+        {
+          "text": "percent",
+          "start": 0.293,
+          "end": 0.88
+        },
+        {
+          "text": "less",
+          "start": 0.88,
+          "end": 1.44
+        },
+        {
+          "text": "driving.",
+          "start": 1.44,
+          "end": 1.92
+        }
+      ]
+    },
+    "t-whole": {
+      "file": "vo/t-whole.wav",
+      "seconds": 1.514,
+      "words": [
+        {
+          "text": "Zones",
+          "start": 0.08,
+          "end": 0.64
+        },
+        {
+          "text": "kept",
+          "start": 0.64,
+          "end": 1.04
+        },
+        {
+          "text": "whole.",
+          "start": 1.04,
+          "end": 1.52
+        }
+      ]
+    },
+    "t-close": {
+      "file": "vo/t-close.wav",
+      "seconds": 2.798,
+      "words": [
+        {
+          "text": "Keep",
+          "start": 0,
+          "end": 0.32
+        },
+        {
+          "text": "the",
+          "start": 0.32,
+          "end": 0.56
+        },
+        {
+          "text": "order.",
+          "start": 0.56,
+          "end": 1.2
+        },
+        {
+          "text": "Remove",
+          "start": 1.44,
+          "end": 1.84
+        },
+        {
+          "text": "the",
+          "start": 1.84,
+          "end": 2.08
+        },
+        {
+          "text": "detours.",
+          "start": 2.08,
+          "end": 2.48
+        }
+      ]
+    },
+    "d-hero": {
+      "file": "vo/d-hero.wav",
+      "seconds": 8.126,
+      "words": [
+        {
+          "text": "This",
+          "start": 0,
+          "end": 0.24
+        },
+        {
+          "text": "is",
+          "start": 0.24,
+          "end": 0.4
+        },
+        {
+          "text": "the",
+          "start": 0.4,
+          "end": 0.56
+        },
+        {
+          "text": "website.",
+          "start": 0.56,
+          "end": 1.36
+        },
+        {
+          "text": "It",
+          "start": 1.44,
+          "end": 1.68
+        },
+        {
+          "text": "loads",
+          "start": 1.68,
+          "end": 2
+        },
+        {
+          "text": "a",
+          "start": 2,
+          "end": 2.24
+        },
+        {
+          "text": "real",
+          "start": 2.24,
+          "end": 2.4
+        },
+        {
+          "text": "Amazon",
+          "start": 2.4,
+          "end": 2.88
+        },
+        {
+          "text": "route,",
+          "start": 2.88,
+          "end": 3.52
+        },
+        {
+          "text": "154",
+          "start": 3.76,
+          "end": 4.56
+        },
+        {
+          "text": "stops",
+          "start": 4.56,
+          "end": 4.96
+        },
+        {
+          "text": "in",
+          "start": 4.96,
+          "end": 5.2
+        },
+        {
+          "text": "Boston,",
+          "start": 5.2,
+          "end": 5.92
+        },
+        {
+          "text": "and",
+          "start": 6,
+          "end": 6.16
+        },
+        {
+          "text": "re-sequences",
+          "start": 6.16,
+          "end": 6.8
+        },
+        {
+          "text": "it",
+          "start": 6.8,
+          "end": 7.12
+        },
+        {
+          "text": "right",
+          "start": 7.12,
+          "end": 7.36
+        },
+        {
+          "text": "in",
+          "start": 7.36,
+          "end": 7.52
+        },
+        {
+          "text": "your",
+          "start": 7.52,
+          "end": 7.68
+        },
+        {
+          "text": "browser.",
+          "start": 7.68,
+          "end": 8.08
+        }
+      ]
+    },
+    "d-stamp": {
+      "file": "vo/d-stamp.wav",
+      "seconds": 5.958,
+      "words": [
+        {
+          "text": "Twenty",
+          "start": 0.16,
+          "end": 0.56
+        },
+        {
+          "text": "minutes",
+          "start": 0.56,
+          "end": 0.88
+        },
+        {
+          "text": "less",
+          "start": 0.88,
+          "end": 1.28
+        },
+        {
+          "text": "driving,",
+          "start": 1.28,
+          "end": 1.84
+        },
+        {
+          "text": "with",
+          "start": 1.84,
+          "end": 2.32
+        },
+        {
+          "text": "twenty-three",
+          "start": 2.32,
+          "end": 2.96
+        },
+        {
+          "text": "of",
+          "start": 2.96,
+          "end": 3.2
+        },
+        {
+          "text": "its",
+          "start": 3.2,
+          "end": 3.44
+        },
+        {
+          "text": "twenty-six",
+          "start": 3.44,
+          "end": 4.009
+        },
+        {
+          "text": "zones",
+          "start": 4.009,
+          "end": 4.32
+        },
+        {
+          "text": "still",
+          "start": 4.32,
+          "end": 4.88
+        },
+        {
+          "text": "in",
+          "start": 4.88,
+          "end": 5.12
+        },
+        {
+          "text": "the",
+          "start": 5.12,
+          "end": 5.28
+        },
+        {
+          "text": "driver's",
+          "start": 5.28,
+          "end": 5.68
+        },
+        {
+          "text": "order.",
+          "start": 5.68,
+          "end": 6
+        }
+      ]
+    },
+    "d-ledger": {
+      "file": "vo/d-ledger.wav",
+      "seconds": 12.994,
+      "words": [
+        {
+          "text": "Across",
+          "start": 0.16,
+          "end": 0.64
+        },
+        {
+          "text": "3,052",
+          "start": 0.64,
+          "end": 2
+        },
+        {
+          "text": "routes",
+          "start": 2,
+          "end": 2.56
+        },
+        {
+          "text": "the",
+          "start": 2.56,
+          "end": 2.72
+        },
+        {
+          "text": "model",
+          "start": 2.72,
+          "end": 2.96
+        },
+        {
+          "text": "never",
+          "start": 2.96,
+          "end": 3.28
+        },
+        {
+          "text": "saw,",
+          "start": 3.28,
+          "end": 4
+        },
+        {
+          "text": "that",
+          "start": 4.16,
+          "end": 4.4
+        },
+        {
+          "text": "is",
+          "start": 4.4,
+          "end": 4.64
+        },
+        {
+          "text": "5.9%",
+          "start": 4.64,
+          "end": 5.84
+        },
+        {
+          "text": "less",
+          "start": 5.84,
+          "end": 6.16
+        },
+        {
+          "text": "driving,",
+          "start": 6.16,
+          "end": 6.88
+        },
+        {
+          "text": "almost",
+          "start": 7.04,
+          "end": 7.52
+        },
+        {
+          "text": "no",
+          "start": 7.52,
+          "end": 7.84
+        },
+        {
+          "text": "zone",
+          "start": 7.84,
+          "end": 8.16
+        },
+        {
+          "text": "re-entries,",
+          "start": 8.16,
+          "end": 9.12
+        },
+        {
+          "text": "and",
+          "start": 9.44,
+          "end": 9.6
+        },
+        {
+          "text": "one",
+          "start": 9.6,
+          "end": 9.84
+        },
+        {
+          "text": "late",
+          "start": 9.84,
+          "end": 10.16
+        },
+        {
+          "text": "stop,",
+          "start": 10.16,
+          "end": 10.56
+        },
+        {
+          "text": "where",
+          "start": 10.56,
+          "end": 10.88
+        },
+        {
+          "text": "the",
+          "start": 10.88,
+          "end": 11.04
+        },
+        {
+          "text": "drivers",
+          "start": 11.04,
+          "end": 11.36
+        },
+        {
+          "text": "had",
+          "start": 11.36,
+          "end": 11.68
+        },
+        {
+          "text": "469.",
+          "start": 11.68,
+          "end": 12.88
+        }
+      ]
+    },
+    "d-turn": {
+      "file": "vo/d-turn.wav",
+      "seconds": 11.929,
+      "words": [
+        {
+          "text": "Why",
+          "start": 0,
+          "end": 0.48
+        },
+        {
+          "text": "not",
+          "start": 0.48,
+          "end": 0.64
+        },
+        {
+          "text": "take",
+          "start": 0.64,
+          "end": 0.88
+        },
+        {
+          "text": "the",
+          "start": 0.88,
+          "end": 1.04
+        },
+        {
+          "text": "shortest",
+          "start": 1.04,
+          "end": 1.44
+        },
+        {
+          "text": "path?",
+          "start": 1.44,
+          "end": 2.16
+        },
+        {
+          "text": "Here",
+          "start": 2.32,
+          "end": 2.64
+        },
+        {
+          "text": "it",
+          "start": 2.64,
+          "end": 2.8
+        },
+        {
+          "text": "is",
+          "start": 2.8,
+          "end": 2.96
+        },
+        {
+          "text": "14%",
+          "start": 2.96,
+          "end": 3.76
+        },
+        {
+          "text": "shorter,",
+          "start": 3.76,
+          "end": 4.56
+        },
+        {
+          "text": "but",
+          "start": 4.64,
+          "end": 4.8
+        },
+        {
+          "text": "it",
+          "start": 4.8,
+          "end": 5.04
+        },
+        {
+          "text": "drives",
+          "start": 5.04,
+          "end": 5.36
+        },
+        {
+          "text": "back",
+          "start": 5.36,
+          "end": 5.6
+        },
+        {
+          "text": "into",
+          "start": 5.6,
+          "end": 5.84
+        },
+        {
+          "text": "a",
+          "start": 5.84,
+          "end": 6
+        },
+        {
+          "text": "finished",
+          "start": 6,
+          "end": 6.32
+        },
+        {
+          "text": "zone",
+          "start": 6.32,
+          "end": 6.72
+        },
+        {
+          "text": "23",
+          "start": 6.72,
+          "end": 7.36
+        },
+        {
+          "text": "times.",
+          "start": 7.36,
+          "end": 8.08
+        },
+        {
+          "text": "Line",
+          "start": 8.4,
+          "end": 8.72
+        },
+        {
+          "text": "of",
+          "start": 8.72,
+          "end": 8.88
+        },
+        {
+          "text": "Travel",
+          "start": 8.88,
+          "end": 9.12
+        },
+        {
+          "text": "never",
+          "start": 9.12,
+          "end": 9.52
+        },
+        {
+          "text": "does,",
+          "start": 9.52,
+          "end": 10
+        },
+        {
+          "text": "and",
+          "start": 10,
+          "end": 10.32
+        },
+        {
+          "text": "still",
+          "start": 10.32,
+          "end": 10.64
+        },
+        {
+          "text": "saves",
+          "start": 10.64,
+          "end": 11.04
+        },
+        {
+          "text": "9%.",
+          "start": 11.04,
+          "end": 11.76
+        }
+      ]
+    },
+    "d-case": {
+      "file": "vo/d-case.wav",
+      "seconds": 18.944,
+      "words": [
+        {
+          "text": "The",
+          "start": 0.08,
+          "end": 0.4
+        },
+        {
+          "text": "name",
+          "start": 0.4,
+          "end": 0.8
+        },
+        {
+          "text": "is",
+          "start": 0.8,
+          "end": 1.12
+        },
+        {
+          "text": "the",
+          "start": 1.12,
+          "end": 1.28
+        },
+        {
+          "text": "Postal",
+          "start": 1.28,
+          "end": 1.68
+        },
+        {
+          "text": "Service's:",
+          "start": 1.68,
+          "end": 2.64
+        },
+        {
+          "text": "a",
+          "start": 2.72,
+          "end": 2.96
+        },
+        {
+          "text": "carrier's",
+          "start": 2.96,
+          "end": 3.44
+        },
+        {
+          "text": "case,",
+          "start": 3.44,
+          "end": 4.08
+        },
+        {
+          "text": "one",
+          "start": 4.24,
+          "end": 4.48
+        },
+        {
+          "text": "slot",
+          "start": 4.48,
+          "end": 4.96
+        },
+        {
+          "text": "per",
+          "start": 4.96,
+          "end": 5.28
+        },
+        {
+          "text": "stop,",
+          "start": 5.28,
+          "end": 5.84
+        },
+        {
+          "text": "in",
+          "start": 5.84,
+          "end": 6.16
+        },
+        {
+          "text": "walking",
+          "start": 6.16,
+          "end": 6.56
+        },
+        {
+          "text": "order.",
+          "start": 6.56,
+          "end": 7.28
+        },
+        {
+          "text": "Here",
+          "start": 7.44,
+          "end": 8.08
+        },
+        {
+          "text": "each",
+          "start": 8.08,
+          "end": 8.32
+        },
+        {
+          "text": "slot",
+          "start": 8.32,
+          "end": 8.88
+        },
+        {
+          "text": "is",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "text": "a",
+          "start": 9.2,
+          "end": 9.36
+        },
+        {
+          "text": "zone,",
+          "start": 9.36,
+          "end": 9.76
+        },
+        {
+          "text": "in",
+          "start": 9.76,
+          "end": 10.08
+        },
+        {
+          "text": "the",
+          "start": 10.08,
+          "end": 10.16
+        },
+        {
+          "text": "driver's",
+          "start": 10.16,
+          "end": 10.64
+        },
+        {
+          "text": "order.",
+          "start": 10.64,
+          "end": 10.96
+        },
+        {
+          "text": "Red",
+          "start": 11.469,
+          "end": 11.949
+        },
+        {
+          "text": "is",
+          "start": 11.949,
+          "end": 12.189
+        },
+        {
+          "text": "where",
+          "start": 12.189,
+          "end": 12.509
+        },
+        {
+          "text": "it",
+          "start": 12.509,
+          "end": 12.669
+        },
+        {
+          "text": "changed",
+          "start": 12.669,
+          "end": 12.989
+        },
+        {
+          "text": "the",
+          "start": 12.989,
+          "end": 13.229
+        },
+        {
+          "text": "order.",
+          "start": 13.229,
+          "end": 13.869
+        },
+        {
+          "text": "Manila",
+          "start": 14.029,
+          "end": 14.669
+        },
+        {
+          "text": "is",
+          "start": 14.669,
+          "end": 14.909
+        },
+        {
+          "text": "a",
+          "start": 14.909,
+          "end": 15.069
+        },
+        {
+          "text": "zone",
+          "start": 15.069,
+          "end": 15.309
+        },
+        {
+          "text": "the",
+          "start": 15.309,
+          "end": 15.469
+        },
+        {
+          "text": "driver",
+          "start": 15.469,
+          "end": 15.789
+        },
+        {
+          "text": "visited",
+          "start": 15.789,
+          "end": 16.189
+        },
+        {
+          "text": "twice,",
+          "start": 16.189,
+          "end": 16.989
+        },
+        {
+          "text": "now",
+          "start": 17.149,
+          "end": 17.549
+        },
+        {
+          "text": "done",
+          "start": 17.549,
+          "end": 17.949
+        },
+        {
+          "text": "in",
+          "start": 17.949,
+          "end": 18.269
+        },
+        {
+          "text": "one",
+          "start": 18.269,
+          "end": 18.589
+        },
+        {
+          "text": "trip.",
+          "start": 18.589,
+          "end": 18.909
+        }
+      ]
+    },
+    "d-how": {
+      "file": "vo/d-how.wav",
+      "seconds": 16.464,
+      "words": [
+        {
+          "text": "A",
+          "start": 0.16,
+          "end": 0.4
+        },
+        {
+          "text": "LightGBM",
+          "start": 0.4,
+          "end": 0.96
+        },
+        {
+          "text": "ranker",
+          "start": 0.96,
+          "end": 1.6
+        },
+        {
+          "text": "learned",
+          "start": 1.6,
+          "end": 1.84
+        },
+        {
+          "text": "the",
+          "start": 1.84,
+          "end": 2
+        },
+        {
+          "text": "driver's",
+          "start": 2,
+          "end": 2.4
+        },
+        {
+          "text": "next",
+          "start": 2.4,
+          "end": 2.72
+        },
+        {
+          "text": "zone",
+          "start": 2.72,
+          "end": 3.28
+        },
+        {
+          "text": "from",
+          "start": 3.28,
+          "end": 3.68
+        },
+        {
+          "text": "6,112",
+          "start": 3.68,
+          "end": 5.36
+        },
+        {
+          "text": "routes.",
+          "start": 5.36,
+          "end": 5.76
+        },
+        {
+          "text": "It",
+          "start": 6.229,
+          "end": 6.549
+        },
+        {
+          "text": "picks",
+          "start": 6.549,
+          "end": 6.789
+        },
+        {
+          "text": "the",
+          "start": 6.789,
+          "end": 7.029
+        },
+        {
+          "text": "right",
+          "start": 7.029,
+          "end": 7.349
+        },
+        {
+          "text": "one",
+          "start": 7.349,
+          "end": 7.949
+        },
+        {
+          "text": "68%",
+          "start": 7.949,
+          "end": 8.549
+        },
+        {
+          "text": "of",
+          "start": 8.549,
+          "end": 8.709
+        },
+        {
+          "text": "the",
+          "start": 8.709,
+          "end": 8.869
+        },
+        {
+          "text": "time;",
+          "start": 8.869,
+          "end": 9.429
+        },
+        {
+          "text": "the",
+          "start": 9.669,
+          "end": 9.829
+        },
+        {
+          "text": "nearest",
+          "start": 9.829,
+          "end": 10.229
+        },
+        {
+          "text": "zone,",
+          "start": 10.229,
+          "end": 10.869
+        },
+        {
+          "text": "35%.",
+          "start": 10.949,
+          "end": 12.309
+        },
+        {
+          "text": "Then",
+          "start": 12.629,
+          "end": 12.869
+        },
+        {
+          "text": "a",
+          "start": 12.869,
+          "end": 13.189
+        },
+        {
+          "text": "local",
+          "start": 13.189,
+          "end": 13.429
+        },
+        {
+          "text": "search",
+          "start": 13.429,
+          "end": 13.749
+        },
+        {
+          "text": "prices",
+          "start": 13.749,
+          "end": 14.229
+        },
+        {
+          "text": "every",
+          "start": 14.229,
+          "end": 14.629
+        },
+        {
+          "text": "move",
+          "start": 14.629,
+          "end": 14.869
+        },
+        {
+          "text": "in",
+          "start": 14.869,
+          "end": 15.109
+        },
+        {
+          "text": "Amazon's",
+          "start": 15.109,
+          "end": 15.749
+        },
+        {
+          "text": "road",
+          "start": 15.749,
+          "end": 15.989
+        },
+        {
+          "text": "times.",
+          "start": 15.989,
+          "end": 16.309
+        }
+      ]
+    },
+    "d-desk": {
+      "file": "vo/d-desk.wav",
+      "seconds": 8.317,
+      "words": [
+        {
+          "text": "The",
+          "start": 0,
+          "end": 0.24
+        },
+        {
+          "text": "dispatch",
+          "start": 0.24,
+          "end": 0.64
+        },
+        {
+          "text": "desk",
+          "start": 0.64,
+          "end": 1.12
+        },
+        {
+          "text": "runs",
+          "start": 1.12,
+          "end": 1.52
+        },
+        {
+          "text": "real",
+          "start": 1.52,
+          "end": 1.92
+        },
+        {
+          "text": "routes",
+          "start": 1.92,
+          "end": 2.32
+        },
+        {
+          "text": "from",
+          "start": 2.32,
+          "end": 2.56
+        },
+        {
+          "text": "all",
+          "start": 2.56,
+          "end": 2.88
+        },
+        {
+          "text": "five",
+          "start": 2.88,
+          "end": 3.2
+        },
+        {
+          "text": "cities.",
+          "start": 3.2,
+          "end": 4
+        },
+        {
+          "text": "This",
+          "start": 4.4,
+          "end": 4.72
+        },
+        {
+          "text": "one",
+          "start": 4.72,
+          "end": 4.96
+        },
+        {
+          "text": "is",
+          "start": 4.96,
+          "end": 5.28
+        },
+        {
+          "text": "Austin,",
+          "start": 5.28,
+          "end": 6.16
+        },
+        {
+          "text": "183",
+          "start": 6.64,
+          "end": 7.68
+        },
+        {
+          "text": "stops.",
+          "start": 7.68,
+          "end": 8.16
+        }
+      ]
+    },
+    "d-trust": {
+      "file": "vo/d-trust.wav",
+      "seconds": 10.522,
+      "words": [
+        {
+          "text": "Turn",
+          "start": 0,
+          "end": 0.48
+        },
+        {
+          "text": "driver",
+          "start": 0.48,
+          "end": 0.8
+        },
+        {
+          "text": "trust",
+          "start": 0.8,
+          "end": 1.12
+        },
+        {
+          "text": "off,",
+          "start": 1.12,
+          "end": 1.76
+        },
+        {
+          "text": "and",
+          "start": 1.84,
+          "end": 1.92
+        },
+        {
+          "text": "you",
+          "start": 1.92,
+          "end": 2.08
+        },
+        {
+          "text": "get",
+          "start": 2.08,
+          "end": 2.24
+        },
+        {
+          "text": "the",
+          "start": 2.24,
+          "end": 2.4
+        },
+        {
+          "text": "shortest",
+          "start": 2.4,
+          "end": 2.8
+        },
+        {
+          "text": "path:",
+          "start": 2.8,
+          "end": 3.52
+        },
+        {
+          "text": "19",
+          "start": 3.92,
+          "end": 4.32
+        },
+        {
+          "text": "zone",
+          "start": 4.32,
+          "end": 4.88
+        },
+        {
+          "text": "re-entries.",
+          "start": 4.88,
+          "end": 5.84
+        },
+        {
+          "text": "Turn",
+          "start": 6.16,
+          "end": 6.48
+        },
+        {
+          "text": "it",
+          "start": 6.48,
+          "end": 6.64
+        },
+        {
+          "text": "back",
+          "start": 6.64,
+          "end": 6.8
+        },
+        {
+          "text": "up,",
+          "start": 6.8,
+          "end": 7.04
+        },
+        {
+          "text": "and",
+          "start": 7.04,
+          "end": 7.12
+        },
+        {
+          "text": "they",
+          "start": 7.12,
+          "end": 7.2
+        },
+        {
+          "text": "go",
+          "start": 7.2,
+          "end": 7.44
+        },
+        {
+          "text": "to",
+          "start": 7.44,
+          "end": 7.6
+        },
+        {
+          "text": "zero,",
+          "start": 7.6,
+          "end": 8.24
+        },
+        {
+          "text": "still",
+          "start": 8.4,
+          "end": 8.72
+        },
+        {
+          "text": "8%",
+          "start": 8.72,
+          "end": 9.36
+        },
+        {
+          "text": "shorter",
+          "start": 9.36,
+          "end": 9.76
+        },
+        {
+          "text": "than",
+          "start": 9.76,
+          "end": 10
+        },
+        {
+          "text": "the",
+          "start": 10,
+          "end": 10.16
+        },
+        {
+          "text": "driver.",
+          "start": 10.16,
+          "end": 10.48
+        }
+      ]
+    },
+    "d-rush": {
+      "file": "vo/d-rush.wav",
+      "seconds": 12.012,
+      "words": [
+        {
+          "text": "Add",
+          "start": 0,
+          "end": 0.48
+        },
+        {
+          "text": "eight",
+          "start": 0.48,
+          "end": 0.96
+        },
+        {
+          "text": "same-day",
+          "start": 0.96,
+          "end": 1.68
+        },
+        {
+          "text": "orders.",
+          "start": 1.68,
+          "end": 2.56
+        },
+        {
+          "text": "Fitting",
+          "start": 2.8,
+          "end": 3.2
+        },
+        {
+          "text": "them",
+          "start": 3.2,
+          "end": 3.36
+        },
+        {
+          "text": "into",
+          "start": 3.36,
+          "end": 3.6
+        },
+        {
+          "text": "the",
+          "start": 3.6,
+          "end": 3.76
+        },
+        {
+          "text": "driver's",
+          "start": 3.76,
+          "end": 4.16
+        },
+        {
+          "text": "route",
+          "start": 4.16,
+          "end": 4.4
+        },
+        {
+          "text": "by",
+          "start": 4.4,
+          "end": 4.64
+        },
+        {
+          "text": "hand",
+          "start": 4.64,
+          "end": 5.36
+        },
+        {
+          "text": "leaves",
+          "start": 5.44,
+          "end": 5.84
+        },
+        {
+          "text": "three",
+          "start": 5.84,
+          "end": 6.16
+        },
+        {
+          "text": "late.",
+          "start": 6.16,
+          "end": 6.8
+        },
+        {
+          "text": "Line",
+          "start": 6.96,
+          "end": 7.28
+        },
+        {
+          "text": "of",
+          "start": 7.28,
+          "end": 7.44
+        },
+        {
+          "text": "Travel",
+          "start": 7.44,
+          "end": 7.76
+        },
+        {
+          "text": "gets",
+          "start": 7.76,
+          "end": 8.16
+        },
+        {
+          "text": "every",
+          "start": 8.16,
+          "end": 8.448
+        },
+        {
+          "text": "one",
+          "start": 8.448,
+          "end": 8.64
+        },
+        {
+          "text": "there",
+          "start": 8.64,
+          "end": 8.96
+        },
+        {
+          "text": "on",
+          "start": 8.96,
+          "end": 9.2
+        },
+        {
+          "text": "time,",
+          "start": 9.2,
+          "end": 9.84
+        },
+        {
+          "text": "for",
+          "start": 10,
+          "end": 10.32
+        },
+        {
+          "text": "17",
+          "start": 10.32,
+          "end": 10.8
+        },
+        {
+          "text": "more",
+          "start": 10.8,
+          "end": 11.12
+        },
+        {
+          "text": "minutes",
+          "start": 11.12,
+          "end": 11.44
+        },
+        {
+          "text": "of",
+          "start": 11.44,
+          "end": 11.6
+        },
+        {
+          "text": "driving.",
+          "start": 11.6,
+          "end": 12
+        }
+      ]
+    },
+    "d-proof": {
+      "file": "vo/d-proof.wav",
+      "seconds": 10.061,
+      "words": [
+        {
+          "text": "Every",
+          "start": 0,
+          "end": 0.56
+        },
+        {
+          "text": "claim",
+          "start": 0.56,
+          "end": 0.88
+        },
+        {
+          "text": "is",
+          "start": 0.88,
+          "end": 1.12
+        },
+        {
+          "text": "checked",
+          "start": 1.12,
+          "end": 1.36
+        },
+        {
+          "text": "on",
+          "start": 1.36,
+          "end": 1.52
+        },
+        {
+          "text": "held-out",
+          "start": 1.52,
+          "end": 2.08
+        },
+        {
+          "text": "routes:",
+          "start": 2.08,
+          "end": 2.72
+        },
+        {
+          "text": "Amazon's",
+          "start": 2.96,
+          "end": 3.52
+        },
+        {
+          "text": "official",
+          "start": 3.52,
+          "end": 3.84
+        },
+        {
+          "text": "scorer,",
+          "start": 3.84,
+          "end": 4.72
+        },
+        {
+          "text": "OR-Tools",
+          "start": 4.72,
+          "end": 5.6
+        },
+        {
+          "text": "as",
+          "start": 5.6,
+          "end": 5.92
+        },
+        {
+          "text": "a",
+          "start": 5.92,
+          "end": 6.08
+        },
+        {
+          "text": "baseline,",
+          "start": 6.08,
+          "end": 6.88
+        },
+        {
+          "text": "bootstrap",
+          "start": 6.96,
+          "end": 7.52
+        },
+        {
+          "text": "intervals,",
+          "start": 7.52,
+          "end": 8.32
+        },
+        {
+          "text": "and",
+          "start": 8.56,
+          "end": 8.72
+        },
+        {
+          "text": "the",
+          "start": 8.72,
+          "end": 8.88
+        },
+        {
+          "text": "limits",
+          "start": 8.88,
+          "end": 9.2
+        },
+        {
+          "text": "we",
+          "start": 9.2,
+          "end": 9.44
+        },
+        {
+          "text": "know",
+          "start": 9.44,
+          "end": 9.68
+        },
+        {
+          "text": "about.",
+          "start": 9.68,
+          "end": 10
+        }
+      ]
+    },
+    "d-close": {
+      "file": "vo/d-close.wav",
+      "seconds": 6.677,
+      "words": [
+        {
+          "text": "Keep",
+          "start": 0.16,
+          "end": 0.48
+        },
+        {
+          "text": "the",
+          "start": 0.48,
+          "end": 0.64
+        },
+        {
+          "text": "order",
+          "start": 0.64,
+          "end": 0.88
+        },
+        {
+          "text": "drivers",
+          "start": 0.88,
+          "end": 1.36
+        },
+        {
+          "text": "already",
+          "start": 1.36,
+          "end": 1.84
+        },
+        {
+          "text": "know.",
+          "start": 1.84,
+          "end": 2.56
+        },
+        {
+          "text": "Remove",
+          "start": 2.8,
+          "end": 3.2
+        },
+        {
+          "text": "the",
+          "start": 3.2,
+          "end": 3.36
+        },
+        {
+          "text": "detours.",
+          "start": 3.36,
+          "end": 4.24
+        },
+        {
+          "text": "The",
+          "start": 4.4,
+          "end": 4.64
+        },
+        {
+          "text": "code",
+          "start": 4.64,
+          "end": 4.96
+        },
+        {
+          "text": "and",
+          "start": 4.96,
+          "end": 5.2
+        },
+        {
+          "text": "the",
+          "start": 5.2,
+          "end": 5.28
+        },
+        {
+          "text": "deck",
+          "start": 5.28,
+          "end": 5.6
+        },
+        {
+          "text": "are",
+          "start": 5.6,
+          "end": 5.84
+        },
+        {
+          "text": "linked",
+          "start": 5.84,
+          "end": 6.08
+        },
+        {
+          "text": "right",
+          "start": 6.08,
+          "end": 6.4
+        },
+        {
+          "text": "here.",
+          "start": 6.4,
+          "end": 6.64
+        }
+      ]
+    }
+  }
+}
