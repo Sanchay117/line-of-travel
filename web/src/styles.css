@@ -332,7 +332,7 @@ section { padding: clamp(64px, 9vw, 128px) var(--gutter); max-width: var(--wrap)
 .motion .steps.ran li:nth-child(2) .step-no { animation-delay: 400ms; }
 .motion .steps.ran li:nth-child(3) .step-no { animation-delay: 800ms; }
 .motion .steps.ran li:nth-child(4) .step-no { animation-delay: 1200ms; }
-@keyframes stop-pass { 0% { color: var(--steel); } 25% { color: var(--cancel); transform: translateY(-3px); } 100% { color: var(--steel); transform: none; } }
+@keyframes stop-pass { 0% { color: var(--steel); } 25% { color: var(--cancel); } 100% { color: var(--steel); } }
 
 /* Evidence: bars grow from the baseline, the trade-off line is drawn, then its points land. */
 .motion .chart .bar { transform: scaleY(0); transform-box: fill-box; transform-origin: 50% 100%; }
