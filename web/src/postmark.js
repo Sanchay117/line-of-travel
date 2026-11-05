@@ -47,8 +47,9 @@ export function postmarkSVG({ top = "LINE OF TRAVEL", bottom = "", big = "", sma
 export function markSVG(color = "#c4352b") {
   return `
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <circle cx="26" cy="32" r="21" fill="none" stroke="${color}" stroke-width="4"/>
-  <path d="M8 26 Q15 21 22 26 T36 26 T50 26 T62 26 M8 38 Q15 43 22 38 T36 38 T50 38 T62 38" fill="none" stroke="${color}" stroke-width="3.6" stroke-linecap="round"/>
+  <circle class="m-ring" cx="26" cy="32" r="21" fill="none" stroke="${color}" stroke-width="4" pathLength="1" transform="rotate(-90 26 32)"/>
+  <path class="m-wave" d="M8 26 Q15 21 22 26 T36 26 T50 26 T62 26" fill="none" stroke="${color}" stroke-width="3.6" stroke-linecap="round" pathLength="1"/>
+  <path class="m-wave" d="M8 38 Q15 43 22 38 T36 38 T50 38 T62 38" fill="none" stroke="${color}" stroke-width="3.6" stroke-linecap="round" pathLength="1"/>
 </svg>`;
 }
 

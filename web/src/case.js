@@ -49,11 +49,12 @@ export function renderCase(el, route, lotTour) {
       : !lotTour && vDrv.get(z) > 1 ? `<span class="was">${vDrv.get(z)} trips</span>` : "";
     const title = `Zone ${short(route.zones[z])}, ${stops} stops: driver visits it ${i + 1}${ordinal(i + 1)}` +
       (vDrv.get(z) > 1 ? ` in ${vDrv.get(z)} separate trips` : "") + (lotTour ? `; Line of Travel ${num}${ordinal(num)}` : "");
-    return `<div class="slot${isMoved ? " moved" : ""}${isMerged ? " merged" : ""}" title="${title}">
+    return `<div class="slot${isMoved ? " moved" : ""}${isMerged ? " merged" : ""}" style="--i:${i}" title="${title}">
       <span class="num">${num}</span>${tag}
       <span class="lbl"><span>${short(route.zones[z])}</span><span>${stops}</span></span>
     </div>`;
   }).join("");
+  el.style.setProperty("--n", drv.length); // the red ink lands after the last slot is cased
   el.setAttribute("aria-label", `Carrier case of ${drv.length} zones in the driver's order.` +
     (lotTour ? ` ${drv.length - moved} keep the driver's sequence, ${moved} re-sequenced, ${merged} visited in one trip instead of several.` : ""));
   return { zones: drv.length, moved, merged };

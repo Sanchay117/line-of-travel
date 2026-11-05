@@ -24,17 +24,22 @@ function reentryStops(route, tour) {
   return marks;
 }
 
-function panelSVG(route, tour, { color, dashed, w = 360, h = 300 }) {
+function panelSVG(route, tour, { key, color, dashed, w = 360, h = 300 }) {
   const P = project(route, w, h);
   const pts = Array.from(tour.slice(1), (i) => P(i));
   const d = pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join("");
   const dots = [];
   for (let i = 1; i < route.n; i++) { const [x, y] = P(i); dots.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="1.6" fill="#1b2230" opacity="0.55"/>`); }
-  const re = reentryStops(route, tour).map((i) => { const [x, y] = P(i); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" fill="none" stroke="#c4352b" stroke-width="1.6"/>`; });
+  const re = reentryStops(route, tour).map((i, k) => { const [x, y] = P(i); return `<circle class="re" style="--i:${k}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" fill="none" stroke="#c4352b" stroke-width="1.6"/>`; });
   const [fx, fy] = pts[0];
+  // The line is revealed through a mask that is "driven" along the same path, so the driver's
+  // dashes stay dashes while the van draws its route (styles.css, .triptych .draw).
   return `<svg viewBox="0 0 ${w} ${h}" role="img">
+    <defs><mask id="drive-${key}" maskUnits="userSpaceOnUse" x="0" y="0" width="${w}" height="${h}">
+      <path class="draw" d="${d}" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" pathLength="1"/>
+    </mask></defs>
     ${dots.join("")}
-    <path d="${d}" fill="none" stroke="${color}" stroke-width="${dashed ? 1.3 : 1.8}" ${dashed ? 'stroke-dasharray="4 3"' : ""} stroke-linejoin="round"/>
+    <path d="${d}" mask="url(#drive-${key})" fill="none" stroke="${color}" stroke-width="${dashed ? 1.3 : 1.8}" ${dashed ? 'stroke-dasharray="4 3"' : ""} stroke-linejoin="round"/>
     ${re.join("")}
     <circle cx="${fx}" cy="${fy}" r="4.5" fill="#f7f7f2" stroke="#1b2230" stroke-width="2"/>
   </svg>`;
@@ -48,11 +53,11 @@ export function renderTriptych(el, route, sets) {
     { key: "driver", title: "Driver's order", cls: "", color: "#6b7280", dashed: true },
     { key: "tsp", title: "Shortest path", cls: "is-tsp", color: "#1b2230", dashed: false },
     { key: "lot", title: "Line of Travel", cls: "is-lot", color: "#c4352b", dashed: false },
-  ].map((p) => {
+  ].map((p, panel) => {
     const m = sets[p.key].m;
     const pct = (100 * (m.travel - base)) / base;
     const delta = p.key === "driver" ? "" : `<small> ${pct < 0 ? "−" : "+"}${Math.abs(pct).toFixed(1)}%</small>`;
-    return `<div class="panel ${p.cls}">
+    return `<div class="panel ${p.cls}" style="--p:${panel}">
       <h3><span>${p.title}</span></h3>
       ${panelSVG(route, sets[p.key].tour, p)}
       <dl>

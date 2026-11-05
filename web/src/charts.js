@@ -52,7 +52,7 @@ function frontier(fig, data) {
   const xTicks = ticks(0, Math.max(...xs) * 1.08, 0.02);
   const lot = data.filter((d) => d.lot).sort((a, b) => a.score - b.score);
   const path = lot.map((d, i) => `${i ? "L" : "M"}${x(d.score)} ${y(d.saving)}`).join("");
-  const marks = data.map((d) => {
+  const marks = data.map((d, di) => {
     const cx = x(d.score), cy = y(d.saving);
     const tipTxt = `<b>${d.label}</b><br>${d.saving.toFixed(1)}% drive time saved · score ${d.score.toFixed(3)}<br>${d.reentries.toFixed(1)} zone re-entries per route`;
     const shape = d.lot
@@ -62,7 +62,7 @@ function frontier(fig, data) {
     const dx = anchor === "end" ? -10 : 10;
     const label = d.showLabel === false ? "" :
       `<text class="${d.primary || d.key === "driver" ? "lab-strong" : "lab"}" x="${cx + dx}" y="${cy + (d.dy ?? -8)}" text-anchor="${anchor}">${d.label}</text>`;
-    return `<g data-tip="${tipTxt.replace(/"/g, "&quot;")}"><circle cx="${cx}" cy="${cy}" r="14" fill="transparent"/>${shape}${label}</g>`;
+    return `<g class="pt" style="--i:${di}" data-tip="${tipTxt.replace(/"/g, "&quot;")}"><circle cx="${cx}" cy="${cy}" r="14" fill="transparent"/>${shape}${label}</g>`;
   }).join("");
   fig.innerHTML = `<h3>The optimizer saves more on paper. Line of Travel stays close to the driver.</h3>
     <p class="chart-sub">Mean over ${data.n} held-out routes. Left means closer to the driver's real order.</p>
@@ -71,7 +71,7 @@ function frontier(fig, data) {
       ${xTicks.map((v) => `<text x="${x(v)}" y="${H - m.b + 18}" text-anchor="middle">${v.toFixed(2)}</text>`).join("")}
       <text x="${(m.l + W - m.r) / 2}" y="${H - 6}" text-anchor="middle">Amazon score (0 = the driver's own order)</text>
       <text x="${m.l - 38}" y="14">Drive time saved vs the driver</text>
-      <path d="${path}" fill="none" stroke="${RED}" stroke-width="2" opacity="0.6"/>
+      <path class="trail" d="${path}" fill="none" stroke="${RED}" stroke-width="2" opacity="0.6" pathLength="1"/>
       ${marks}
     </svg>
     ${table(["Method", "Saved", "Score", "Re-entries"], data.map((d) => [d.label, `${d.saving.toFixed(2)}%`, d.score.toFixed(4), d.reentries.toFixed(2)]))}`;
@@ -95,12 +95,12 @@ function histogram(fig, h) {
   const y = scale(0, ymax * 1.1, H - m.b, m.t);
   const yTicks = ticks(0, ymax * 1.1, ymax > 600 ? 200 : 100);
   const range = (b) => b.tail === "under" ? `more than ${-lo}% longer` : b.tail === "over" ? `${hi}% or more saved` : `${b.x0}% to ${b.x1}%`;
-  const bars = all.map((b) => {
+  const bars = all.map((b, bi) => {
     const x0 = x(b.x0) + 1, w = Math.max(1, x(b.x1) - x(b.x0) - 2), y0 = y(b.count);
     const neg = b.tail === "under" || b.x1 <= 0;
     const r = Math.min(4, w / 2, Math.max(0, (H - m.b - y0) / 2));
     return `<g data-tip="${b.count} routes: ${range(b)}"><rect x="${x0}" y="${m.t}" width="${w}" height="${H - m.b - m.t}" fill="transparent"/>
-      <path d="M${x0} ${H - m.b} V${y0 + r} Q${x0} ${y0} ${x0 + r} ${y0} H${x0 + w - r} Q${x0 + w} ${y0} ${x0 + w} ${y0 + r} V${H - m.b} Z" fill="${neg ? GRAY : RED}" opacity="${neg ? 0.7 : 0.88}"/></g>`;
+      <path class="bar" style="--i:${bi}" d="M${x0} ${H - m.b} V${y0 + r} Q${x0} ${y0} ${x0 + r} ${y0} H${x0 + w - r} Q${x0 + w} ${y0} ${x0 + w} ${y0 + r} V${H - m.b} Z" fill="${neg ? GRAY : RED}" opacity="${neg ? 0.7 : 0.88}"/></g>`;
   }).join("");
   const med = x(h.median);
   const tickTxt = [
@@ -150,7 +150,7 @@ function hbars(fig, { title, sub, rows, fmt, max, aria, head }) {
     return `<g data-tip="${r.tip || `${r.label}: ${fmt(r.value)}`}"><rect x="0" y="${y0 - 8}" width="${W}" height="${rowH - 4}" fill="transparent"/>
       <text class="${r.hi ? "lab-strong" : "lab"}" x="${m.l - 12}" y="${y0 + 15}" text-anchor="end">${r.label}</text>
       ${r.note ? `<text x="${m.l - 12}" y="${y0 + 29}" text-anchor="end">${r.note}</text>` : ""}
-      <path d="M${m.l} ${y0} H${x1 - rr} Q${x1} ${y0} ${x1} ${y0 + rr} V${y0 + h - rr} Q${x1} ${y0 + h} ${x1 - rr} ${y0 + h} H${m.l} Z" fill="${r.hi ? RED : GRAY}" opacity="${r.hi ? 0.9 : 0.75}"/>
+      <path class="hbar" style="--i:${i}" d="M${m.l} ${y0} H${x1 - rr} Q${x1} ${y0} ${x1} ${y0 + rr} V${y0 + h - rr} Q${x1} ${y0 + h} ${x1 - rr} ${y0 + h} H${m.l} Z" fill="${r.hi ? RED : GRAY}" opacity="${r.hi ? 0.9 : 0.75}"/>
       <text class="${r.hi ? "lab-strong" : "lab"}" x="${x1 + 8}" y="${y0 + 15}">${fmt(r.value)}</text></g>`;
   }).join("");
   fig.innerHTML = `<h3>${title}</h3><p class="chart-sub">${sub}</p>

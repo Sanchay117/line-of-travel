@@ -6,6 +6,7 @@ import { stamp, markSVG } from "./postmark.js";
 import { renderCase, zoneOrder } from "./case.js";
 import { renderTriptych } from "./triptych.js";
 import { renderCharts } from "./charts.js";
+import { roll, wireMotion } from "./motion.js";
 
 // ?shot=<section id> : screenshot mode for the deck (no sticky header, no animation, scrolled to the section)
 const SHOT = new URLSearchParams(location.search).get("shot");
@@ -73,6 +74,9 @@ async function main() {
     if (v) el.href = v;
   }
   renderCharts(summary);
+  // The held-out results roll up like an odometer once the entrance has played.
+  document.querySelectorAll(".ledger dd[data-stat]").forEach((el, i) => roll(el, 1250 + i * 120));
+  wireMotion();
 
   const heroMeta = routes.find((r) => r.id === summary.hero) || routes[0];
   const hero = await loadRoute(heroMeta);
@@ -92,6 +96,7 @@ async function main() {
     // Solve time as measured on this visitor's machine, not a benchmark figure.
     const secs = `${(lot.ms / 1000).toFixed(1)} s`;
     document.querySelectorAll("[data-live='hero-ms']").forEach((el) => (el.textContent = secs));
+    roll(document.querySelector(".ledger [data-live='hero-ms']"));
     const msNote = document.getElementById("hero-ms-note");
     if (msNote) msNote.textContent = `this ${hero.n - 1}-stop route, measured just now`;
     // Sections below the fold do not wait for the map animation.
