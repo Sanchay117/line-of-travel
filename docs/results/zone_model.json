@@ -1,0 +1,27 @@
+{
+  "held_out_transitions": 66621,
+  "mean_candidates": 20.862460785638163,
+  "top1_learned": 0.6801759205055463,
+  "top1_nearest_zone": 0.3536572552198256,
+  "top1_history_only": 0.6302066915837349,
+  "feature_importance": {
+    "dist_km": 44661,
+    "dist_rank": 327338,
+    "dist_ratio": 683850,
+    "n_zones": 17489,
+    "from_station": 32,
+    "to_station": 452,
+    "same_cluster": 4825,
+    "same_block": 132770,
+    "d_block": 3726,
+    "d_row": 22384,
+    "d_col": 92773,
+    "ad_block": 20587,
+    "ad_row": 141348,
+    "ad_col": 345503,
+    "hist_ac": 301821,
+    "hist_ca": 71879,
+    "hist_share": 5521786,
+    "hist_out": 73444
+  }
+}

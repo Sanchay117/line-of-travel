@@ -1,0 +1,17 @@
+node_modules/
+.venv/
+data/raw/
+data/processed/
+dist/
+.DS_Store
+__pycache__/
+*.pyc
+docs/results/*.log
+docs/results/pilot*.jsonl
+deck/build/
+.pytest_cache/
+film/node_modules/
+film/out/
+film/public/capture/
+.env
+.env.*

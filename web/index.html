@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Line of Travel</title>
+  <meta name="description" content="Learns the order Amazon drivers actually deliver in, then removes only the detours. Tested on 3,052 real held-out routes." />
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Line of Travel" />
+  <meta property="og:description" content="Driver-aware last-mile routing, learned from 9,164 real Amazon routes. DataNova 2026, DN-OR-01." />
+  <meta property="og:image" content="./og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+  <header class="mast">
+    <a class="mast-mark" href="#top" aria-label="Line of Travel, back to top"><span data-mark="small"></span>Line of Travel</a>
+    <nav aria-label="Sections">
+      <a href="#turn">The problem</a>
+      <a href="#how">How it works</a>
+      <a href="#desk">Try a route</a>
+      <a href="#proof">Evidence</a>
+      <a href="https://github.com/" data-link="repo">Code</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- 1. HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">DataNova 2026 · DN-OR-01 Last-mile delivery route optimization</p>
+        <h1 id="hero-title" class="wordmark">Line of <span>Travel</span></h1>
+        <p class="lede">Learns the order Amazon drivers actually deliver in, then removes only the detours.</p>
+        <p class="sub">Tested on <b data-stat="eval_routes">3,052</b> real routes from Los Angeles, Seattle, Boston, Chicago and Austin that the model never saw.</p>
+        <button class="stamp-btn" id="hero-run" type="button">
+          <span class="stamp-btn-ink">Re-sequence route</span>
+          <span class="stamp-btn-id" id="hero-route-id">loading…</span>
+        </button>
+        <dl class="ledger" aria-label="Held-out results">
+          <div><dt>Drive time vs the driver</dt><dd data-stat="headline_saving">…</dd></div>
+          <div><dt>Zone re-entries per route</dt><dd data-stat="headline_reentries">…</dd></div>
+          <div><dt>Late stops added</dt><dd data-stat="headline_late">…</dd></div>
+          <div><dt>Solve time, in your browser</dt><dd><span data-live="hero-ms">…</span><small id="hero-ms-note">solving this route now</small></dd></div>
+        </dl>
+      </div>
+      <figure class="hero-map" aria-label="Map of the selected route">
+        <div id="hero-map" class="map"></div>
+        <div class="map-key" aria-hidden="true">
+          <span class="key-driver">Driver's order</span>
+          <span class="key-lot">Line of Travel</span>
+        </div>
+        <div id="hero-postmark" class="postmark-slot" aria-live="polite"></div>
+        <figcaption id="hero-caption" class="map-caption">Lines join stops in delivery order. Travel times come from Amazon's road-network matrix.</figcaption>
+      </figure>
+    </section>
+
+    <!-- 2. THE TURN -->
+    <section id="turn" class="turn" aria-labelledby="turn-title">
+      <p class="eyebrow" id="turn-eyebrow">The same stops, three ways</p>
+      <h2 id="turn-title">The shortest route is <em data-stat="tsp_saving_abs">9.6%</em> shorter. Drivers would never drive it.</h2>
+      <p class="turn-body">A pure optimizer ignores the zones drivers work in. On the held-out routes it re-enters <b data-stat="tsp_reentries">17</b> zones per route, where drivers re-enter <b data-stat="driver_reentries">1.3</b>. Line of Travel keeps each zone in one visit, follows the order drivers use, and still cuts the waste.</p>
+      <div class="triptych" id="triptych"></div>
+      <p class="map-caption">Open circle: first stop after leaving the station. Red rings: the van drives back into a zone it already finished.</p>
+    </section>
+
+    <!-- 3. THE THREAD -->
+    <section id="thread" class="thread" aria-labelledby="thread-title">
+      <div class="thread-copy">
+        <p class="eyebrow">Where the name comes from</p>
+        <h2 id="thread-title">Mail carriers solved this with a case of pigeonholes.</h2>
+        <p>Every morning a letter carrier sorts the day's mail into a case, one slot per stop, in the order they walk. The US Postal Service records that order for every carrier route and calls it the <i>Line of Travel</i>.</p>
+        <p>Amazon drivers have a line of travel too. Nobody wrote it down, so we learned it from <b data-stat="train_routes">6,112</b> of their routes.</p>
+        <p class="aside">The case shows route <span data-route-id></span>. Each slot is one of its planning zones, laid out in the driver's order and numbered in the order Line of Travel visits it. The small number on each label is its stop count.</p>
+      </div>
+      <figure class="case-wrap">
+        <div id="case" class="case" role="img" aria-label="Carrier case of zones in visit order"></div>
+        <figcaption class="case-key"><span class="slot-kept">Driver's sequence kept</span><span class="slot-merged">Driver came back later: now one trip</span><span class="slot-moved">Re-sequenced</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- 4. HOW IT WORKS -->
+    <section id="how" class="how" aria-labelledby="how-title">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title">Four steps, all on Amazon's own data.</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-no">01</span>
+          <h3>Read the routes</h3>
+          <p><b data-stat="train_routes">6,112</b> training routes and <b data-stat="train_stops">904,527</b> stops, each with the order the driver actually delivered.</p>
+        </li>
+        <li>
+          <span class="step-no">02</span>
+          <h3>Learn the next zone</h3>
+          <p>A LightGBM ranker picks the driver's next zone <b data-stat="zone_top1">68%</b> of the time from about 21 candidates. Picking the nearest zone gets <b data-stat="zone_nearest">35%</b>.</p>
+        </li>
+        <li>
+          <span class="step-no">03</span>
+          <h3>Price every move</h3>
+          <p>Road seconds from Amazon's matrix, plus a charge for leaving a zone, plus a habit cost of −log p for moves drivers rarely make.</p>
+        </li>
+        <li>
+          <span class="step-no">04</span>
+          <h3>Re-sequence in your browser</h3>
+          <p>Iterated local search that moves single stops and whole zones, counts late deliveries as it goes. On the route above it took <b data-live="hero-ms">a moment</b> in your browser.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 5. THE REAL THING -->
+    <section id="desk" class="desk" aria-labelledby="desk-title">
+      <div class="desk-head">
+        <p class="eyebrow">Dispatch desk</p>
+        <h2 id="desk-title">Pick a real route. Decide how much to trust the driver.</h2>
+      </div>
+      <div class="desk-grid">
+        <form class="controls" id="controls" onsubmit="return false">
+          <label class="field">
+            <span>City</span>
+            <select id="city"></select>
+          </label>
+          <label class="field">
+            <span>Route</span>
+            <select id="route"></select>
+          </label>
+          <label class="field">
+            <span>Trust the driver <output id="trust-out">medium</output></span>
+            <input id="trust" type="range" min="0" max="4" step="1" value="2" />
+            <span class="range-ends"><i>Shortest path</i><i>Driver's habits</i></span>
+          </label>
+          <fieldset class="field scen">
+            <legend>What if</legend>
+            <label><input type="radio" name="scen" value="none" checked /> Normal day</label>
+            <label><input type="radio" name="scen" value="late" /> Van leaves 45 min late</label>
+            <label><input type="radio" name="scen" value="rush" /> 8 same-day orders added</label>
+          </fieldset>
+          <button id="run" class="stamp-btn small" type="button"><span class="stamp-btn-ink">Re-sequence</span></button>
+          <p class="note" id="scen-note"></p>
+        </form>
+        <figure class="desk-map">
+          <div id="desk-map" class="map"></div>
+          <div id="desk-postmark" class="postmark-slot" aria-live="polite"></div>
+        </figure>
+        <div class="readout">
+          <table class="cmp" id="cmp">
+            <caption>Same stops, same matrix</caption>
+            <thead><tr><th scope="col"></th><th scope="col">Driver</th><th scope="col">Line of Travel</th><th scope="col">Shortest path</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <p class="note">Amazon score is the challenge's own route-similarity metric: 0 means identical to the driver.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PROOF -->
+    <section id="proof" class="proof" aria-labelledby="proof-title">
+      <p class="eyebrow">Evidence</p>
+      <h2 id="proof-title">Checked on <span data-stat="eval_routes">3,052</span> routes the model never saw.</h2>
+      <p class="proof-lede">Amazon split its 2021 Last Mile Routing Research Challenge data into training and evaluation routes. Everything below uses the training routes to learn and the evaluation routes to score.</p>
+      <div class="proof-grid">
+        <figure class="chart" id="chart-frontier"></figure>
+        <figure class="chart" id="chart-hist"></figure>
+        <figure class="chart" id="chart-zone"></figure>
+        <figure class="chart" id="chart-quality"></figure>
+        <figure class="chart wide" id="chart-scen"></figure>
+      </div>
+      <ul class="checks" id="checks"></ul>
+    </section>
+
+    <!-- 7. CLOSE -->
+    <section class="close" aria-labelledby="close-title">
+      <span data-mark="large" class="close-mark"></span>
+      <h2 id="close-title" class="wordmark small">Line of <span>Travel</span></h2>
+      <p class="lede">Keep the order drivers already know. Remove the detours.</p>
+      <p class="links">
+        <a data-link="repo" href="https://github.com/">Code and reproduction steps</a>
+        <a data-link="deck" href="./LineOfTravel_DataNova2026.pdf">Presentation</a>
+        <a href="https://registry.opendata.aws/amazon-last-mile-challenges/">Amazon Last Mile dataset</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Data: Amazon Last Mile Routing Research Challenge 2021, © Amazon.com, Inc., CC BY-NC 4.0. Route score: port of the official MIT-CAVE scorer, tested for equality. "Line of Travel" is the US Postal Service's term for a carrier's delivery order; this project is not affiliated with USPS or Amazon. Basemap © OpenStreetMap contributors, tiles by OpenFreeMap. Built for DataNova 2026 by Sanchay Singh.</p>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+{
+ "hero": "RouteID_283cd4d5-390a-4f85-a6aa-1b52adc58eeb",
+ "stats": {
+  "eval_routes": "3,052",
+  "train_routes": "6,112",
+  "train_stops": "904,527",
+  "headline_saving": "\u22125.9%<small>592 driver-hours over 3,052 routes</small>",
+  "headline_reentries": "0.01<small>drivers 1.4 \u00b7 shortest path 15.7</small>",
+  "headline_late": "0<small>1 late vs the driver's 469, of 28,354 windowed stops</small>",
+  "tsp_saving_abs": "11.3%",
+  "tsp_reentries": "16",
+  "driver_reentries": "1.4",
+  "zone_top1": "68%",
+  "zone_nearest": "35%"
+ },
+ "stats_raw": {
+  "eval_routes": 3052,
+  "saving": 5.93245725375936,
+  "tsp_saving": 11.34621732157338,
+  "worse": 0.024246395806028834,
+  "worse4": 0.0022935779816513763,
+  "impact": {
+   "wage": 21.13,
+   "vans": 100,
+   "days": 250,
+   "min_per_route": 11.636653560506788,
+   "station_hours_day": 19.394422600844646,
+   "station_usd_year": 102451.03738896183
+  },
+  "contiguity": {
+   "single_visit": 0.9360311336489378,
+   "zones": 59357,
+   "zones_per_route": 19.448558322411532
+  },
+  "total_stops": 1337758,
+  "train_routes": 6112,
+  "reentries": 0.01310615989515072,
+  "driver_reentries": 1.380078636959371,
+  "tsp_reentries": 15.721166448230669,
+  "late_driver": 469,
+  "late_lot": 1,
+  "late_tsp": 1,
+  "ms": 301.3614023591088,
+  "hours_saved": 591.9177777777786,
+  "ci": [
+   5.796921230557708,
+   6.068380064120028
+  ],
+  "tsp_ci": [
+   11.173098051266217,
+   11.51594833399026
+  ],
+  "score": 0.03239581585845347,
+  "tsp_score": 0.08048683158584535,
+  "zone_top1": 0.6801759205055463,
+  "zone_nearest": 0.3536572552198256,
+  "zone_history": 0.6302066915837349,
+  "windowed_stops": 28354,
+  "median_saving": 5.470427643873167,
+  "ortools": {
+   "routes": 200,
+   "gap_pct": -2.2627307673180246,
+   "ortools_s": 5.0,
+   "better_or_equal": 0.965
+  }
+ },
+ "frontier": [
+  {
+   "key": "driver",
+   "label": "Driver's order",
+   "saving": 0.0,
+   "score": 0.0,
+   "reentries": 1.380078636959371,
+   "dy": -10
+  },
+  {
+   "key": "nearest",
+   "label": "Nearest neighbour",
+   "saving": -2.2347607210540392,
+   "score": 0.10513719855832242,
+   "reentries": 20.98165137614679,
+   "dy": 18
+  },
+  {
+   "key": "tsp",
+   "label": "Shortest path",
+   "saving": 11.34621732157338,
+   "score": 0.08048683158584535,
+   "reentries": 15.721166448230669
+  },
+  {
+   "key": "habit_0_600",
+   "label": "Line of Travel, zones only",
+   "lot": true,
+   "primary": false,
+   "saving": 8.04325716208749,
+   "score": 0.050175868283093054,
+   "reentries": 0.002948885976408912,
+   "showLabel": true,
+   "dy": -12,
+   "anchor": "start"
+  },
+  {
+   "key": "habit_30_300",
+   "label": "Line of Travel (default)",
+   "lot": true,
+   "primary": true,
+   "saving": 5.93245725375936,
+   "score": 0.03239581585845347,
+   "reentries": 0.01310615989515072,
+   "showLabel": true,
+   "dy": 4,
+   "anchor": "end"
+  },
+  {
+   "key": "habit_60_600",
+   "label": "Line of Travel, high trust",
+   "lot": true,
+   "primary": false,
+   "saving": 5.198776060278931,
+   "score": 0.030281173001310613,
+   "reentries": 0.002621231979030144,
+   "showLabel": false,
+   "dy": -12,
+   "anchor": "start"
+  },
+  {
+   "key": "habit_120_1200",
+   "label": "Line of Travel, 120/1200",
+   "lot": true,
+   "primary": false,
+   "saving": 4.655665893899834,
+   "score": 0.030541897116644824,
+   "reentries": 0.000982961992136304,
+   "showLabel": false,
+   "dy": -12,
+   "anchor": "start"
+  },
+  {
+   "key": "habit_300_1200",
+   "label": "Line of Travel, maximum trust",
+   "lot": true,
+   "primary": false,
+   "saving": 4.2752003540369365,
+   "score": 0.02990697903014417,
+   "reentries": 0.003931847968545216,
+   "showLabel": false,
+   "dy": -12,
+   "anchor": "start"
+  }
+ ],
+ "hist": {
+  "n": 3052,
+  "median": 5.470427643873167,
+  "bins": [
+   {
+    "x0": -4,
+    "x1": -3,
+    "count": 5
+   },
+   {
+    "x0": -3,
+    "x1": -2,
+    "count": 9
+   },
+   {
+    "x0": -2,
+    "x1": -1,
+    "count": 25
+   },
+   {
+    "x0": -1,
+    "x1": 0,
+    "count": 28
+   },
+   {
+    "x0": 0,
+    "x1": 1,
+    "count": 98
+   },
+   {
+    "x0": 1,
+    "x1": 2,
+    "count": 169
+   },
+   {
+    "x0": 2,
+    "x1": 3,
+    "count": 299
+   },
+   {
+    "x0": 3,
+    "x1": 4,
+    "count": 374
+   },
+   {
+    "x0": 4,
+    "x1": 5,
+    "count": 343
+   },
+   {
+    "x0": 5,
+    "x1": 6,
+    "count": 353
+   },
+   {
+    "x0": 6,
+    "x1": 7,
+    "count": 297
+   },
+   {
+    "x0": 7,
+    "x1": 8,
+    "count": 269
+   },
+   {
+    "x0": 8,
+    "x1": 9,
+    "count": 197
+   },
+   {
+    "x0": 9,
+    "x1": 10,
+    "count": 149
+   },
+   {
+    "x0": 10,
+    "x1": 11,
+    "count": 134
+   },
+   {
+    "x0": 11,
+    "x1": 12,
+    "count": 68
+   },
+   {
+    "x0": 12,
+    "x1": 13,
+    "count": 70
+   },
+   {
+    "x0": 13,
+    "x1": 14,
+    "count": 46
+   },
+   {
+    "x0": 14,
+    "x1": 15,
+    "count": 35
+   },
+   {
+    "x0": 15,
+    "x1": 16,
+    "count": 27
+   }
+  ],
+  "under": {
+   "x1": -4,
+   "count": 7
+  },
+  "over": {
+   "x0": 16,
+   "count": 50
+  },
+  "worse": 0.024246395806028834
+ },
+ "quality": {
+  "title": "Even routes Amazon rated High have about 11% to recover.",
+  "sub": "Median drive time a shortest path recovers, by Amazon's own route-quality label, 6,112 training routes. The labels do not predict the waste, so the saving is not confined to a few badly run routes.",
+  "kind": "flat",
+  "rows": [
+   {
+    "label": "High",
+    "note": "2,718 routes",
+    "value": 10.77918068671254,
+    "hi": true
+   },
+   {
+    "label": "Medium",
+    "note": "3,292 routes",
+    "value": 10.407495133725865,
+    "hi": false
+   },
+   {
+    "label": "Low",
+    "note": "102 routes",
+    "value": 10.55396072750505,
+    "hi": false
+   }
+  ],
+  "raw": {
+   "High": {
+    "median": 10.77918068671254,
+    "n": 2718
+   },
+   "Low": {
+    "median": 10.55396072750505,
+    "n": 102
+   },
+   "Medium": {
+    "median": 10.407495133725865,
+    "n": 3292
+   }
+  }
+ },
+ "checks": [
+  "<b>Held-out test.</b> The habit model learns from Amazon's 6,112 training routes. Every number here is scored on the 3,052 evaluation routes Amazon held back.",
+  "<b>Official metric.</b> Amazon score uses a port of the challenge scorer that matches the original exactly on 40 randomised test routes.",
+  "<b>Solver quality.</b> On 200 routes our engine's shortest path (the code the browser runs) is 2.26% shorter than Google OR-Tools given 5 s per route, with a 0.3 s budget.",
+  "<b>Ablation.</b> Our first engine saved 3.3% and drove longer than the driver on 18% of routes. Moving whole zones in the search and counting lateness when accepting a tour took that to 5.9% and 2.4%.",
+  "<b>Uncertainty.</b> Drive time saved at the default setting: 5.9% (95% bootstrap interval 5.8% to 6.1%). Shortest path: 11.3% (11.2% to 11.5%).",
+  "<b>Delivery windows.</b> 28,354 stops have a time window. Late stops: driver's order 469, Line of Travel 1.",
+  "<b>No leakage.</b> Station-history features for a training route only count other days; evaluation routes only see training history.",
+  "<b>Honest limit.</b> Travel times are Amazon's planned estimates, not GPS traces, so savings are measured in Amazon's own matrix. Drivers may know shortcuts the matrix does not."
+ ],
+ "scenarios": {
+  "routes": 400,
+  "rows": [
+   {
+    "key": "base",
+    "label": "Normal day",
+    "driver": {
+     "saving": 0.0,
+     "day_saving": 0.0,
+     "late": 61,
+     "reentries": 1.4175,
+     "hours": 1305.1383333333333
+    },
+    "lot": {
+     "saving": 6.179379027084826,
+     "day_saving": 1.4245378639013588,
+     "late": 0,
+     "reentries": 0.0125,
+     "hours": 1224.4888888888888
+    },
+    "tsp": {
+     "saving": 11.606134556192213,
+     "day_saving": 3.0809942144196802,
+     "late": 0,
+     "reentries": 15.86,
+     "hours": 1153.6622222222222
+    }
+   },
+   {
+    "key": "late",
+    "label": "Van leaves 45 min late",
+    "driver": {
+     "saving": 0.0,
+     "day_saving": 0.0,
+     "late": 227,
+     "reentries": 1.4175,
+     "hours": 1305.1383333333333
+    },
+    "lot": {
+     "saving": 5.737918798730998,
+     "day_saving": 1.919885175966692,
+     "late": 0,
+     "reentries": 0.0125,
+     "hours": 1230.2505555555556
+    },
+    "tsp": {
+     "saving": 11.164802028222637,
+     "day_saving": 3.8112308314446457,
+     "late": 0,
+     "reentries": 16.0525,
+     "hours": 1159.4222222222222
+    }
+   },
+   {
+    "key": "rush",
+    "label": "8 same-day orders added",
+    "driver": {
+     "saving": 0.0,
+     "day_saving": 0.0,
+     "late": 1809,
+     "reentries": 2.31,
+     "hours": 1374.2825
+    },
+    "lot": {
+     "saving": -5.279684328206011,
+     "day_saving": -1.5434703907070972,
+     "late": 0,
+     "reentries": 1.745,
+     "hours": 1446.8402777777778
+    },
+    "tsp": {
+     "saving": 4.925256957317323,
+     "day_saving": 2.2963479107291445,
+     "late": 0,
+     "reentries": 20.4825,
+     "hours": 1306.5955555555556
+    }
+   }
+  ]
+ },
+ "ablation": {
+  "habit_30_300": {
+   "v1": {
+    "saving": 3.317807282835556,
+    "score": 0.046991448230668406,
+    "reentries": 0.8322411533420708,
+    "worse": 0.17562254259501967,
+    "worse4": 0.09665792922673656,
+    "late": 4
+   },
+   "v2": {
+    "saving": 5.93245725375936,
+    "score": 0.03239581585845347,
+    "reentries": 0.01310615989515072,
+    "worse": 0.024246395806028834,
+    "worse4": 0.0022935779816513763,
+    "late": 1
+   }
+  },
+  "habit_0_600": {
+   "v1": {
+    "saving": 4.716298839602515,
+    "score": 0.060839541284403664,
+    "reentries": 0.8790956749672346,
+    "worse": 0.14154652686762778,
+    "worse4": 0.09239842726081259,
+    "late": 3
+   },
+   "v2": {
+    "saving": 8.04325716208749,
+    "score": 0.050175868283093054,
+    "reentries": 0.002948885976408912,
+    "worse": 0.0049148099606815205,
+    "worse4": 0.0,
+    "late": 2
+   }
+  },
+  "tsp": {
+   "v1": {
+    "saving": 9.131676862452329,
+    "score": 0.08786883355176933,
+    "reentries": 16.94167758846658,
+    "worse": 0.07503276539973788,
+    "worse4": 0.04849279161205767,
+    "late": 2
+   },
+   "v2": {
+    "saving": 11.34621732157338,
+    "score": 0.08048683158584534,
+    "reentries": 15.721166448230669,
+    "worse": 0.001965923984272608,
+    "worse4": 0.00163826998689384,
+    "late": 1
+   }
+  }
+ },
+ "zone": {
+  "n": 66621,
+  "candidates": 20.862460785638163,
+  "rows": [
+   {
+    "label": "Nearest zone",
+    "value": 0.3536572552198256
+   },
+   {
+    "label": "Station history",
+    "value": 0.6302066915837349
+   },
+   {
+    "label": "Learned ranker",
+    "value": 0.6801759205055463,
+    "hi": true
+   }
+  ]
+ },
+ "methods": {
+  "driver": {
+   "routes": 3052.0,
+   "saving": 0.0,
+   "median_saving": 0.0,
+   "score": 0.0,
+   "reentries": 1.380078636959371,
+   "late": 469.0,
+   "ms": null,
+   "hours": 9977.615555555556
+  },
+  "nearest": {
+   "routes": 3052.0,
+   "saving": -2.2347607210540392,
+   "median_saving": -2.1926579626047715,
+   "score": 0.10513719855832242,
+   "reentries": 20.98165137614679,
+   "late": 2027.0,
+   "ms": null,
+   "hours": 10200.591388888888
+  },
+  "tsp": {
+   "routes": 3052.0,
+   "saving": 11.34621732157338,
+   "median_saving": 11.019659809954799,
+   "score": 0.08048683158584535,
+   "reentries": 15.721166448230669,
+   "late": 1.0,
+   "ms": 301.1402359108781,
+   "hours": 8845.533611111112
+  },
+  "habit_0_600": {
+   "routes": 3052.0,
+   "saving": 8.04325716208749,
+   "median_saving": 7.6573221347938984,
+   "score": 0.050175868283093054,
+   "reentries": 0.002948885976408912,
+   "late": 2.0,
+   "ms": 301.3627129750983,
+   "hours": 9175.090277777777
+  },
+  "habit_30_300": {
+   "routes": 3052.0,
+   "saving": 5.93245725375936,
+   "median_saving": 5.470427643873167,
+   "score": 0.03239581585845347,
+   "reentries": 0.01310615989515072,
+   "late": 1.0,
+   "ms": 301.3614023591088,
+   "hours": 9385.697777777777
+  },
+  "habit_60_600": {
+   "routes": 3052.0,
+   "saving": 5.198776060278931,
+   "median_saving": 4.829930496156045,
+   "score": 0.030281173001310613,
+   "reentries": 0.002621231979030144,
+   "late": 4.0,
+   "ms": 301.6038663171691,
+   "hours": 9458.901666666667
+  },
+  "habit_120_1200": {
+   "routes": 3052.0,
+   "saving": 4.655665893899834,
+   "median_saving": 4.420317688584065,
+   "score": 0.030541897116644824,
+   "reentries": 0.000982961992136304,
+   "late": 2.0,
+   "ms": 301.88106159895153,
+   "hours": 9513.09111111111
+  },
+  "habit_300_1200": {
+   "routes": 3052.0,
+   "saving": 4.2752003540369365,
+   "median_saving": 4.17854077782338,
+   "score": 0.02990697903014417,
+   "reentries": 0.003931847968545216,
+   "late": 5.0,
+   "ms": 302.52260812581915,
+   "hours": 9551.0525
+  }
+ },
+ "links": {
+  "repo": "https://github.com/Sanchay117/line-of-travel",
+  "deck": "./LineOfTravel_DataNova2026.pdf",
+  "demo": "https://sanchay117.github.io/line-of-travel/"
+ }
+}
